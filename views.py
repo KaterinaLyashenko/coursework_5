@@ -67,7 +67,7 @@ def pass_turn():
 @main_blueprint.route("/fight/end-fight")
 def end_fight():
     """Кнопка завершить игру - переход в главное меню"""
-    return render_template("index.html", heroes=heroes)
+    return render_template("../data/templates/index.html", heroes=heroes)
 
 
 @main_blueprint.route("/choose-hero/", methods=['post', 'get'])
@@ -91,9 +91,9 @@ def choose_hero():
 
     if request.method == "POST":
         name = request.form['name']
-        weapon_name = request.form['weapon_name']
-        armor_name = request.form['armor_name']
-        unit_class_name = request.form['unit_class_name']
+        weapon_name = request.form['weapon']
+        armor_name = request.form['armor']
+        unit_class_name = request.form['unit_class']
 
         """Проверить, что классы с такими именамми существуют"""
 
@@ -134,9 +134,9 @@ def choose_enemy():
 
     if request.method == "POST":
         name = request.form['name']
-        weapon_name = request.form['weapon_name']
-        armor_name = request.form['armor_name']
-        unit_class_name = request.form['unit_class_name']
+        weapon_name = request.form['weapon']
+        armor_name = request.form['armor']
+        unit_class_name = request.form['unit_class']
 
         """Проверить, что классы с такими именамми существуют"""
 

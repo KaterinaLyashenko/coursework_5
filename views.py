@@ -67,7 +67,7 @@ def pass_turn():
 @main_blueprint.route("/fight/end-fight")
 def end_fight():
     """Кнопка завершить игру - переход в главное меню"""
-    return render_template("../data/templates/index.html", heroes=heroes)
+    return render_template("index.html", heroes=heroes)
 
 
 @main_blueprint.route("/choose-hero/", methods=['post', 'get'])

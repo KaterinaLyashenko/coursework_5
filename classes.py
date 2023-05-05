@@ -21,7 +21,7 @@ WarriorClass = UnitClass(
     attack=0.8,
     stamina=0.9,
     armor=1.2,
-    skill=FuryPunch,
+    skill=FuryPunch(),
 )
 
 ThiefClass = UnitClass(
@@ -31,7 +31,7 @@ ThiefClass = UnitClass(
     attack=1.5,
     stamina=1.2,
     armor=1.0,
-    skill=HardShot,
+    skill=HardShot(),
 )
 
 unit_classes = {
